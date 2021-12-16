@@ -1,0 +1,83 @@
+% \documentclass[12pt,handout,xcolor=pdftex,dvipsnames,table]{beamer} %For handouts.
+\documentclass[pdf]{beamer}
+%\usepackage{pgfpages} %For handouts.
+% This is the file main.tex
+% \usepackage{handoutWithNotes}
+\usepackage{subcaption} % subfigure
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage[en-US]{datetime2} % fix warning of \author[*]{\today}
+\usepackage{lmodern}% http://ctan.org/pkg/lm (For special Fonts)
+\usepackage{ragged2e} % justify document
+\usepackage{tikz}
+\usepackage{smartdiagram}
+\usepackage{xcolor}
+% \usepackage{subfig}
+\usepackage{multicol}
+
+\mode<presentation>
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\usetheme{Dresden} % so so
+\setbeamertemplate{page number in head/foot}[totalframenumber]
+\setbeamertemplate{navigation symbols}{} %take out the navigation symbols
+\setbeamertemplate{caption}[numbered] %enumerate the caption and tables
+\usefonttheme[stillsansseriflarge]{structureitalicserif}
+  
+%\mode<handout>{\setbeamercolor{background canvas}{bg=black!5}} %For handouts.
+% \pgfpagesuselayout{4 on 1 with notes}[a4paper,border shrink=5mm]
+  
+%\makeatletter %reset the numbering on the subfigures (1)
+%\@addtoreset{subfigure}{figure} %reset the numbering on the subfigures (2)
+%\makeatother %reset the numbering on the subfigures (3)
+
+%For Large figures
+%\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{SMS}
+
+\title{Azure Replicable CI / CD Locally} % (optional, only for long titles)
+\subtitle{
+	\href{https://github.com/thanos1983/beamerAzureCiCdLocal}
+    		{GitHub Project Repo: beamerAzureCiCdLocal}
+}
+\author[Athanasios Garyfalos]{Author: Athanasios Garyfalos \\*
+Date: \today } % (optional, for multiple authors)
+% {A.~Garyfalos \and A.~Garyfalos2 \and A.~Garyfalos3}
+\institute[garyfalos@cpan.org] % (optional)
+{
+	\\
+	\medskip
+	{
+	% \emph{A.atga12@student.bth.se}
+	% \emph{Another Author email}
+	% \emph{Another Author}
+	}
+}
+% \vspace*{-0.5cm}
+% \date{Date: \today} % Multi page content
+% \subject{Sample of Work Demonstration Django Rest Framework}
+
+% \AtBeginSection[]{
+%  \begin{frame}
+%    \frametitle{Table of Contents}
+%    \tableofcontents[currentsection]
+%  \end{frame}
+% }
+
+\AtBeginSubsection[]{
+  \begin{frame}<beamer>
+    \begin{multicols}{2}
+      \tableofcontents[currentsection,hideothersubsections]
+    \end{multicols}
+  \end{frame}
+}
+
+\begin{document}
+	\input{./title/title.tex}
+	% \include{./copyRightDisclaimer/copyRightDisclaimer}
+	\include{./contents/contents}
+	\include{./introduction/introduction}
+	\include{./project_description/project_description}
+	\include{./project_implementation/project_implementation}
+	\include{./demo/demo}
+	\include{./summary/summary}
+	\include{./bibliography/bibliography}
+\end{document}

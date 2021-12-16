@@ -1,0 +1,116 @@
+\section{Software Development} \label{sec:cicd}
+\subsection{Overall Problems}
+
+\begin{frame}{Cross OS Programming Languages}
+\setbeamercovered{dynamic}%Makes the text appear before it presents nice!!!!
+	\begin{columns}[T] % contents are top vertically aligned
+		\begin{column}{5cm} % alternative top-align that's better for graphics
+		\begin{figure}
+			\only<1>{%
+				\centering Python
+				\includegraphics[width=\columnwidth, height=0.5\textheight]{./png/python}
+			}%
+			\only<2>{%
+				\centering Python2 Deprecated
+				\includegraphics[width=\columnwidth, height=0.5\textheight]{./png/python2}
+			}%
+			\only<3>{%
+				\centering Python3 Active
+				\includegraphics[width=\columnwidth, height=0.5\textheight]{./png/python3}
+			}%
+			\only<4>{%
+				\centering Node JS
+				\includegraphics[width=\columnwidth, height=0.5\textheight]{./png/nodeJs}
+			}%
+			\only<5>{%
+				\centering Under Development
+				\includegraphics[width=\columnwidth, height=0.5\textheight]{./png/nodejsRelease}
+			}%
+			\only<6>{%
+				\centering Current Latest Release
+				\includegraphics[width=\columnwidth, height=0.5\textheight]{./png/nodejsRelease}
+			}%
+			\only<7>{%
+				\centering Active Long Term Support
+				\includegraphics[width=\columnwidth, height=0.5\textheight]{./png/nodejsRelease}
+			}%
+			\only<8>{%
+				\centering Maintenance Long Term Support
+				\includegraphics[width=\columnwidth, height=0.5\textheight]{./png/nodejsRelease}
+			}%
+			\only<9>{%
+				\centering Tons of versions
+				\includegraphics[width=\columnwidth, height=0.5\textheight]{./png/java}
+			}%
+			\only<10>{%
+				\centering Java Oracle
+				\includegraphics[width=\columnwidth, height=0.5\textheight]{./png/javaOracle}
+			}%
+			\only<11>{%
+				\centering Java OpenJDK
+				\includegraphics[width=\columnwidth, height=0.5\textheight]{./png/openjdk}
+			}%
+			\only<12>{%
+				\centering Maintenance Long Term Support (LTS)
+				\includegraphics[width=\columnwidth, height=0.5\textheight]{./png/AdoptOpenJDK}
+			}%
+			\only<13>{%
+				\centering Different Installation Process
+				\includegraphics[width=\columnwidth, height=0.5\textheight]{./png/packageInstaller}
+			}%
+			\only<14>{%
+				\centering Bundle package
+				\includegraphics[width=\columnwidth, height=0.5\textheight]{./png/bundle}
+			}%
+			\only<15>{%
+				\centering Source Code
+				\includegraphics[width=\columnwidth, height=0.5\textheight]{./png/packageBySource}
+			}%
+			\caption{Problem Overview} \label{fig:smallFigure}
+		\end{figure}
+		\end{column}
+		\begin{column}{5cm} % each column can also be its own environment
+			\begin{itemize}
+				\item<+-| alert@+> Python:
+					\begin{itemize}
+						\item<+-| alert@+> Python2
+						\item<+-| alert@+> Python3
+					\end{itemize}
+				\item<+-| alert@+> Node.js
+					\begin{itemize}
+						\item<+-| alert@+> Pending
+						\item<+-| alert@+> Current
+						\item<+-| alert@+> Active LTS
+						\item<+-| alert@+> Maintenance LTS
+					\end{itemize}
+				\item<+-| alert@+> Java:
+					\begin{itemize}
+						\item<+-| alert@+> Oracle
+						\item<+-| alert@+> OpenJDK
+						\item<+-| alert@+> AdoptOpenJDK
+					\end{itemize}
+				\item<+-| alert@+> Cross Platform OS
+			\end{itemize}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\subsection{Simple Solution}
+
+\begin{frame}{Impossible vs Possible}
+	\setbeamercovered{dynamic} %Makes the text appear before it presents nice!!!!
+	\begin{alertblock}{Impossible Solution}
+		\begin{itemize}
+			\item<+-| alert@+> Everyone needs to have exactly same \alert{OS}.
+			\item<+-| alert@+> Everyone needs to install packages \alert{the same way}.
+			\item<+-| alert@+> Everyone must update the OS and package \alert{at the same time}.
+			\item<+-| alert@+> To what extent this is \alert{possible and practical}?
+		\end{itemize}
+	\end{alertblock}
+	\begin{figure}
+		\only<5>{%
+			\centering Containers again and again
+			\includegraphics[width=\columnwidth, height=0.5\textheight]{./png/dockerContainer}
+		}%
+	\end{figure}
+\end{frame}
